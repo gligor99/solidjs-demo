@@ -28,6 +28,7 @@ export const TodoPage: Component = () => {
       <h3 class="text-center text-2xl capitalize font-semibold mb-5 ">
         Todo Example - with SolidJS
       </h3>
+
       <form onsubmit={addTodo}>
         <div>
           <input
@@ -38,9 +39,7 @@ export const TodoPage: Component = () => {
             value={newTitle()}
             onInput={(e) => setNewTitle(e.currentTarget.value)}
           />
-          <button class="mt-5 inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500">
-            Add todo
-          </button>
+          <button class="mt-5 btn-primary">Add todo</button>
         </div>
       </form>
       <div class="max-w-full mx-auto mt-5 py-2 px-4  shadow-lg empty:mt-0 empty:py-0">
@@ -67,7 +66,7 @@ export const TodoPage: Component = () => {
                 </div>
 
                 <button
-                  class='class="inline-block rounded-full border border-red-600 bg-red-600 p-1 text-white hover:bg-transparent hover:text-red-600 focus:outline-none focus:ring active:text-red-500"'
+                  class="btn-icon-rounded"
                   onClick={() => setTodos((t) => removeIndex(t, i()))}
                 >
                   <span class="sr-only"> Remove todo </span>

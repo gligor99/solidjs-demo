@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500;
+  }
+  .btn-icon-rounded {
+    @apply inline-block rounded-full border border-red-600 bg-red-600 p-1 text-white hover:bg-transparent hover:text-red-600 focus:outline-none focus:ring active:text-red-500;
+  }
+}
